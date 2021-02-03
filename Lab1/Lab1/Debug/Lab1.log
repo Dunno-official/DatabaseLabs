@@ -1,0 +1,5 @@
+﻿  main.c
+D:\Business\Study\Univ\2_course\2_semester\Database\DatabaseLabs\Lab1\Lab1\main.c(16,1): warning C4113: "void (__cdecl *)()" отличается в списках параметров от "void (__cdecl *)(void)"
+  supplier.c
+  Создание кода...
+  Lab1.vcxproj -> D:\Business\Study\Univ\2_course\2_semester\Database\DatabaseLabs\Lab1\Debug\Lab1.exe
