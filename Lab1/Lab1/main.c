@@ -4,25 +4,21 @@
 #include "supplement.h"
 #include "supplier.h"
 
-#pragma warning(disable : 4996)
-
-
 
 void clearConsole();
-
 
 
 int main()
 {
 	void (*allCommands[9])() =
 	{
+		clearConsole  ,
 		getSupplement , updateSupplement , insertSupplement , removeSupplement , 
-		getSupplier   , updateSupplier   , insertSupplier   , removeSupplier   ,
-		clearConsole  
+		getSupplier   , updateSupplier   , insertSupplier   , removeSupplier   ,  
 	};
 
-
-	unsigned int command = 8;
+	unsigned int command = 0;
+	
 
 	do
 	{
@@ -38,19 +34,20 @@ int main()
 
 
 
-
 void clearConsole()
 {
+	system("cls");
+
 	printf(
-		"Choose option:\n"
-		"Quit: -1\n"
-		"getSupplement: 0\n"
-		"updateSupplement: 1\n"
-		"insertSupplement\n"
-		"removeSupplement\n"
-		"5 - Insert Slave\n"
-		"6 - Get Slave\n"
-		"7 - Update Slave\n"
-		"8 - Delete Slave\n"
-		"9 - Info\n");
+		"Quit = -1\n"
+		"Clear Console = 0\n\n"
+		"Get Supplement     =  1\n"
+		"Update Supplement  =  2\n"
+		"Insert Supplement  =  3\n"
+		"Remove Supplement  =  4\n\n"
+		"Get Supplier       =  5\n"
+		"Update Supplier    =  6\n"
+		"Insert Supplier    =  7\n"
+		"Remove Supplier    =  8\n\n"
+		"Choose option: ");
 }
