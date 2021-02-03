@@ -1,5 +1,6 @@
 #pragma once
 
+
 typedef struct supplement
 {
 	int masterId;
@@ -13,10 +14,10 @@ typedef struct supplement
 
 
 
-void getSupplement() {}
-void updateSupplement() {}
-void insertSupplement() {}
-void removeSupplement() {}
+void getSupplement(); 
+void updateSupplement();
+void insertSupplement();
+void removeSupplement();
 
 
 
