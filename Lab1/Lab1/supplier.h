@@ -12,7 +12,15 @@ typedef struct supplier
 
 
 
+
+
+static Supplier supplier;
+
+
 void getSupplier();
 void updateSupplier();
 void insertSupplier();
 void removeSupplier();
+
+static void readSupplier();
+static void showSupplier();

@@ -14,10 +14,16 @@ typedef struct supplement
 
 
 
+static Supplement supplement;
+
+
 void getSupplement(); 
 void updateSupplement();
 void insertSupplement();
 void removeSupplement();
+
+static void readSupplement();
+static void showSupplement();
 
 
 
