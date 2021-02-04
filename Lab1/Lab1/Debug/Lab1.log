@@ -1,2 +1,5 @@
-﻿  supplier.c
+﻿  DBcontroller.c
+D:\Business\Study\Univ\2_course\2_semester\Database\DatabaseLabs\Lab1\Lab1\DBcontroller.c(11,54): warning C4018: <=: несоответствие типов со знаком и без знака
+  supplier.c
+  Создание кода...
   Lab1.vcxproj -> D:\Business\Study\Univ\2_course\2_semester\Database\DatabaseLabs\Lab1\Debug\Lab1.exe

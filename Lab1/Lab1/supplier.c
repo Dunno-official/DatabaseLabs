@@ -1,44 +1,47 @@
 #include <stdio.h>
 #include "supplier.h"
+#include "indexer.h"
+#include "DBcontroller.h"
 
 #define MASTER_IND "master.ind"
 #define MASTER_DATA "master.fl"
 #define MASTER_GARBAGE "master_garbage.txt"
-#define INDEXER_SIZE sizeof(struct Indexer)
-#define MASTER_SIZE sizeof(struct Supplier)
+#define INDEXER_SIZE sizeof(Indexer)
+#define MASTER_SIZE sizeof(Supplier)
+#pragma warning(disable : 6387)
 
 
 void getSupplier()
 {
-	FILE* indexTable = fopen(MASTER_IND, "rb");				// "rb": відкрити бінарний файл
-	FILE* database = fopen(MASTER_DATA, "rb");				// тільки для читання
+	FILE* indexTable;
+	FILE* database;
+	Indexer indexer;
+	int ID = 0;
 
-	if (!checkFileExistence(indexTable, database, error))
-	{
-		return 0;
-	}
+	fopen_s(&indexTable , MASTER_IND, "rb");	
+	fopen_s(&database , MASTER_DATA, "rb");		
 
-	struct Indexer indexer;
+	if (indexTable == NULL || database == NULL)
+		return;
 
-	if (!checkIndexExistence(indexTable, error, id))
-	{
-		return 0;
-	}
+	printf_s("Enter ID: ");
+	scanf_s("%d", &ID);
 
-	fseek(indexTable, (id - 1) * INDEXER_SIZE, SEEK_SET);	// Отримуємо індексатор шуканого запису
-	fread(&indexer, INDEXER_SIZE, 1, indexTable);			// за вказаним номером
+	if (checkIndexExistence(indexTable, ID) == 0)
+		return;
 
-	if (!checkRecordExistence(indexer, error))
-	{
-		return 0;
-	}
+	fseek(indexTable, (ID - 1) * INDEXER_SIZE, SEEK_SET);	
+	fread(&indexer, INDEXER_SIZE, 1, indexTable);			
 
-	fseek(database, indexer.address, SEEK_SET);				// Отримуємо шуканий запис з БД-таблички
-	fread(master, sizeof(struct Master), 1, database);		// за знайденою адресою
-	fclose(indexTable);										// Закриваємо файли
+	if (indexer.exists == 1)
+		return;
+	
+	fseek(database, indexer.address, SEEK_SET);				
+	fread(&supplier, sizeof(Supplier), 1, database);		
+	fclose(indexTable);										
 	fclose(database);
 
-	return 1;
+	showSupplier();
 }
 
 

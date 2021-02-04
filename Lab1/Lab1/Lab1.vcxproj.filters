@@ -24,6 +24,9 @@
     <ClCompile Include="supplement.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="DBcontroller.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="indexer.h">
@@ -35,7 +38,7 @@
     <ClInclude Include="supplier.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="controller.h">
+    <ClInclude Include="DBcontroller.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

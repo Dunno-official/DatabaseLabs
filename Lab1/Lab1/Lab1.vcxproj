@@ -139,12 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DBcontroller.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="supplement.c" />
     <ClCompile Include="supplier.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="controller.h" />
+    <ClInclude Include="DBcontroller.h" />
     <ClInclude Include="indexer.h" />
     <ClInclude Include="supplement.h" />
     <ClInclude Include="supplier.h" />
