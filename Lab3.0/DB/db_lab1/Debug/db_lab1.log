@@ -1,0 +1,5 @@
+﻿  reading.c
+D:\Business\Study\Univ\2_course\2_semester\Database\DatabaseLabs\Lab3.0\DB\db_lab1\reading.c(30,29): warning C4129: C: неизвестная escape-последовательность
+D:\Business\Study\Univ\2_course\2_semester\Database\DatabaseLabs\Lab3.0\DB\db_lab1\reading.c(47,21): warning C4129: C: неизвестная escape-последовательность
+D:\Business\Study\Univ\2_course\2_semester\Database\DatabaseLabs\Lab3.0\DB\db_lab1\reading.c(81,20): warning C4129: P: неизвестная escape-последовательность
+  db_lab1.vcxproj -> D:\Business\Study\Univ\2_course\2_semester\Database\DatabaseLabs\Lab3.0\DB\Debug\db_lab1.exe
